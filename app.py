@@ -7,6 +7,9 @@ from dash.dependencies import Input, Output
 # Create a Dash app
 app = dash.Dash(__name__) 
 
+auth = dash_atuh.BasicAuth(app, VALID_USERS)
+server = app.server #Required for Render Development
+
 # Initial dataset
 datasets = {
     "dataset1": {'categories': ['A', 'B', 'C', 'D'], 'values': [10, 15, 7, 12]},
@@ -96,4 +99,4 @@ def update_graph(selected_dataset, a, b, c, d):
 
 #Running the app
 if __name__ == '__main__':
-    app.run_server(debug = True, port = 1112)
+    app.run_server(debug = True)
