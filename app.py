@@ -3,11 +3,12 @@ import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objects as go # use this for online plotly graph
 from dash.dependencies import Input, Output
+import dash_auth
 
 # Create a Dash app
 app = dash.Dash(__name__) 
 
-auth = dash_atuh.BasicAuth(app, VALID_USERS)
+#auth = dash_atuh.BasicAuth(app, VALID_USERS)
 server = app.server #Required for Render Development
 
 # Initial dataset
